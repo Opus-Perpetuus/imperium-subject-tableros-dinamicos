@@ -1,0 +1,56 @@
+{
+  "id": "SUBJECT-tableros-dinamicos",
+  "technicalId": "subject-tableros-dinamicos",
+  "name": "Tableros dinámicos",
+  "version": "0.1.0",
+  "image": "ghcr.io/opus-perpetuus/subject-tableros-dinamicos:0.1.0",
+  "compat": {
+    "nox": ">=0.5.0",
+    "kit": "^0.5.0"
+  },
+  "api": {
+    "basePath": "/",
+    "port": 3000,
+    "healthPath": "/health"
+  },
+  "permissions": [
+    {
+      "id": "subject.tableros-dinamicos.dynamic-dashboard.read",
+      "label": "Ver Tableros dinámicos"
+    },
+    {
+      "id": "subject.tableros-dinamicos.dynamic-dashboard.write",
+      "label": "Editar Tableros dinámicos"
+    }
+  ],
+  "pages": [
+    {
+      "id": "tableros-dinamicos.dynamic-dashboard",
+      "path": "dynamic-dashboard",
+      "permission": "subject.tableros-dinamicos.dynamic-dashboard.read"
+    }
+  ],
+  "menu": [
+    {
+      "id": "tableros-dinamicos.root",
+      "label": "Tableros dinámicos",
+      "order": 0,
+      "children": [
+        {
+          "id": "tableros-dinamicos.dynamic-dashboard",
+          "label": "Tableros dinámicos",
+          "order": 10,
+          "pageId": "tableros-dinamicos.dynamic-dashboard",
+          "path": "dynamic-dashboard",
+          "permission": "subject.tableros-dinamicos.dynamic-dashboard.read"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "domain": "shared-nox-postgres"
+  },
+  "resources": {
+    "dynamic-dashboard": "dynamic_dashboard"
+  }
+}
