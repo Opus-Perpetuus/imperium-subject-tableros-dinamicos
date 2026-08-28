@@ -12,7 +12,7 @@ export async function seed_demo(ctx: {
   await ctx.data.insert("dynamic_dashboard", {
     id: new_id("dynamic-"),
     name: "Tableros dinámicos (ejemplo)",
-    description: "Registro semilla del súbdito. Sustituye al migrar desde Mongo.",
+    description: "Registro semilla de la app. Sustituye al migrar desde Mongo.",
     is_active: true,
     ref: "seed-tableros-dinamicos",
     created_at: ts,
