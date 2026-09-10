@@ -23,13 +23,6 @@
       "label": "Editar Tableros dinámicos"
     }
   ],
-  "pages": [
-    {
-      "id": "tableros-dinamicos.dynamic-dashboard",
-      "path": "dynamic-dashboard",
-      "permission": "subject.tableros-dinamicos.dynamic-dashboard.read"
-    }
-  ],
   "menu": [
     {
       "id": "tableros-dinamicos.root",
@@ -39,18 +32,27 @@
         {
           "id": "tableros-dinamicos.dynamic-dashboard",
           "label": "Tableros dinámicos",
-          "order": 10,
           "pageId": "tableros-dinamicos.dynamic-dashboard",
+          "order": 10,
           "path": "dynamic-dashboard",
-          "permission": "subject.tableros-dinamicos.dynamic-dashboard.read"
+          "permission": "subject.tableros-dinamicos.dynamic-dashboard.read",
+          "icon": "document"
         }
       ]
     }
   ],
+  "pages": [
+    {
+      "id": "tableros-dinamicos.dynamic-dashboard",
+      "path": "dynamic-dashboard",
+      "permission": "subject.tableros-dinamicos.dynamic-dashboard.read"
+    }
+  ],
   "storage": {
-    "domain": "shared-nox-postgres"
+    "domain": "shared-nox-postgres",
+    "files": false
   },
   "resources": {
-    "dynamic-dashboard": "dynamic_dashboard"
+    "dynamic-dashboard": "dynamic-dashboard"
   }
 }
